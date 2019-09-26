@@ -1,0 +1,3 @@
+
+export const SET_MAP_PLACES = 'SET_MAP_PLACES';
+export const FETCH_MAP_PLACES = 'FETCH_MAP_PLACES';

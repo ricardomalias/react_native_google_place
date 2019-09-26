@@ -1,0 +1,2 @@
+dependencies: \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/build/react_native_google_place/Build/Intermediates.noindex/react_native_google_place.build/Debug-iphonesimulator/react_native_google_place.build/DerivedSources/react_native_google_place_vers.c

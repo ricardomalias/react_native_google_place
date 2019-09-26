@@ -1,0 +1,27 @@
+dependencies: \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/node_modules/react-native/React/Views/RCTView.m \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Target\ Support\ Files/React-Core/React-Core-prefix.pch \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/node_modules/react-native/React/Views/RCTView.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTBorderStyle.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTComponent.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTPointerEvents.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTView.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/node_modules/react-native/React/Views/RCTAutoInsetsProtocol.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/node_modules/react-native/React/Views/RCTBorderDrawing.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTDefines.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTInspectorDevServerHelper.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTPackagerConnection.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTAnimationType.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTLog.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTAssert.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTUtils.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Private/React-Core/React/RCTTextDecorationLineType.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Public/Yoga/yoga/Yoga.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Public/Yoga/yoga/YGEnums.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Public/Yoga/yoga/YGMacros.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/ios/Pods/Headers/Public/Yoga/yoga/YGValue.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/node_modules/react-native/React/Base/RCTUtils.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/node_modules/react-native/React/Views/UIView+React.h \
+  /Users/ricardomalias/Documents/GitHub/react_native_google_place/node_modules/react-native/React/Modules/RCTI18nUtil.h
