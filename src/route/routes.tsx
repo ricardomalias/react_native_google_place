@@ -50,13 +50,13 @@ const RoutesNavigator = createStackNavigator(
 const AppContainer = createAppContainer(RoutesNavigator);
 
 export default class Routes extends React.Component {
-  render() {
-    return (
-      <AppContainer
-        ref={navigatorRef => {
-          NavigationService.setTopLevelNavigator(navigatorRef);
-        }}
-      />
-    );
-  }
+    render() {
+        return (
+            <AppContainer
+                ref={navigatorRef => {
+                    NavigationService.setTopLevelNavigator(navigatorRef);
+                }}
+            />
+        );
+    }
 }

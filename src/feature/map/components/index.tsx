@@ -81,24 +81,19 @@ export default class MapComponent extends React.Component<MapProps>{
             <View>
                 <MapView
                     provider={PROVIDER_GOOGLE}
-                    // onMapReady={this.displayUserLocation()}
                     style={styles.map}
                     region={this.state.region}
                     showsUserLocation={true}>
                     {
                         places.map((place: Place, index: number) => {
-                            if(place.geometry.location.lat && place.geometry.location.lng) {
-                                console.log("aqui", this.state.region, place.geometry.location)
-                                return <Marker
-                                    key={index}
-                                    title={place.name}
-                                    description={place.place_id}
-                                    coordinate={{
-                                        latitude: place.geometry.location.lat,
-                                        longitude: place.geometry.location.lng
-                                    }}/>
-                            }
-
+                            return <Marker
+                                key={index}
+                                title={place.name}
+                                description={place.place_id}
+                                coordinate={{
+                                    latitude: place.geometry.location.lat,
+                                    longitude: place.geometry.location.lng
+                                }}/>
                         })
                     }
                 </MapView>

@@ -19,7 +19,7 @@ export function getNearbyPlaces(location: Location, keyword: string = "") {
             }
         },
         onFailure: (e) => {
-            console.log("Error occured loading goals")
+
         },
         label: FETCH_MAP_PLACES,
     });
