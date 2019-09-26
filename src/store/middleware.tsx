@@ -6,8 +6,6 @@ import NavigationService from "../route/NavigationService"
 const apiMiddleware =  ({ dispatch }: any) => (next: any) => async (action: any) => {
     next(action);
 
-    let accessToken = "";
-
     if (action.type !== API) return;
 
     let {
@@ -23,20 +21,13 @@ const apiMiddleware =  ({ dispatch }: any) => (next: any) => async (action: any)
     const dataOrParams = ["GET", "DELETE"].indexOf(method) >= 0  ? "params" : "data";
 
     // axios default configs
-    axios.defaults.baseURL = settings.api_service;
+    axios.defaults.baseURL = settings.GOOGLE_PLACES;
     axios.defaults.headers.common["Content-Type"] = "application/json";
-    axios.defaults.headers.common["Authorization"] = accessToken;
+    // axios.defaults.headers.common["key"] = settings.GOOGLE_CLOUD_KEY;
 
     let services = Object.keys(settings).filter(item => url.includes(item));
 
-    if(services.length === 1) {
-        let service = services[0];
-
-        // @ts-ignore
-        url = url.replace(service, settings[service])
-    } else {
-        url = settings.api_service + url
-    }
+    url += `&key=${settings.GOOGLE_CLOUD_KEY}`
 
     if (label) {
         dispatch(apiStart(label));
@@ -55,13 +46,12 @@ const apiMiddleware =  ({ dispatch }: any) => (next: any) => async (action: any)
             dispatch(onSuccess(data));
         })
         .catch(error => {
-            // console.log('middlewarte error', error)
             // dispatch(apiError(error))
             // dispatch(onFailure(error))
 
-            if (error.response && error.response.status === 403) {
-                dispatch(accessDenied(window.location.pathname));
-            }
+            // if (error.response && error.response.status === 403) {
+            //     dispatch(accessDenied(window.location.pathname));
+            // }
 
         })
         .finally(() => {

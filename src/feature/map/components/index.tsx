@@ -6,19 +6,21 @@ import {
     StyleSheet,
     View
 } from "react-native";
-import MapView, {Marker, ProviderPropType, PROVIDER_GOOGLE} from 'react-native-maps';
+import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 import Geolocation from "@react-native-community/geolocation";
+import {Place} from "../../../models/Place";
 
 interface MapProps {
-    isLoadingData: boolean,
-    provider: ProviderPropType,
+    getNearbyPlaces: Function
+    isLoadingData: boolean
+    places: Array<Place>
 }
 
 const { width, height } = Dimensions.get('window');
 const ASPECT_RATIO = width / height;
 const LATITUDE = 37.35233141;
 const LONGITUDE = -122.0312186;
-const LATITUDE_DELTA = 0.0522;
+const LATITUDE_DELTA = 0.05022;
 const LONGITUDE_DELTA = LATITUDE_DELTA * ASPECT_RATIO;
 
 export default class MapComponent extends React.Component<MapProps>{
@@ -50,10 +52,12 @@ export default class MapComponent extends React.Component<MapProps>{
             });
         }
 
-
-
         Geolocation.getCurrentPosition((position) => {
-            console.log(position)
+            this.props.getNearbyPlaces({
+                latitude: position.coords.latitude,
+                longitude: position.coords.longitude,
+            })
+
             this.setState({
                 region: {
                     latitude: position.coords.latitude,
@@ -67,14 +71,11 @@ export default class MapComponent extends React.Component<MapProps>{
 
     render(){
         let {region} = this.state
-        let marker = null
+        let places = []
 
-        // if(region) {
-        //     marker = <Marker
-        //         title="This is a title"
-        //         description="This is a description"
-        //         coordinate={this.state.region}/>
-        // }
+        if(this.props.places !== undefined) {
+            places = this.props.places
+        }
 
         return (
             <View>
@@ -84,7 +85,22 @@ export default class MapComponent extends React.Component<MapProps>{
                     style={styles.map}
                     region={this.state.region}
                     showsUserLocation={true}>
-                    {marker}
+                    {
+                        places.map((place: Place, index: number) => {
+                            if(place.geometry.location.lat && place.geometry.location.lng) {
+                                console.log("aqui", this.state.region, place.geometry.location)
+                                return <Marker
+                                    key={index}
+                                    title={place.name}
+                                    description={place.place_id}
+                                    coordinate={{
+                                        latitude: place.geometry.location.lat,
+                                        longitude: place.geometry.location.lng
+                                    }}/>
+                            }
+
+                        })
+                    }
                 </MapView>
             </View>
         );

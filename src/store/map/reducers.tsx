@@ -13,7 +13,7 @@ export default function(state = {}, action: any) {
     switch (action.type) {
         case SET_MAP_PLACES:
             return {
-                user: action.payload
+                places: action.payload.results
             }
         case API_START:
             if (action.payload === FETCH_MAP_PLACES) {

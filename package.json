@@ -22,7 +22,6 @@
     "react-native-geocoding": "^0.4.0",
     "react-native-geolocation-service": "^3.1.0",
     "react-native-gesture-handler": "^1.4.1",
-    "react-native-google-places": "^3.1.2",
     "react-native-maps": "https://github.com/react-community/react-native-maps.git",
     "react-native-screens": "^2.0.0-alpha.3",
     "react-native-vector-icons": "^6.6.0",
